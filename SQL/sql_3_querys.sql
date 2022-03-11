@@ -54,6 +54,6 @@ FROM
 
 -- Execution example with return values
 SELECT 
-	city_code, get_film_count('2021-11-01', '2021-11-30', city_code)
+	city_code, get_film_avg('2021-11-01', '2021-11-30', city_code)
 FROM 
 	orders o
