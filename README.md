@@ -7,7 +7,14 @@ I make the SQL process with PostgreSQL and Pgadmin
 There are 3 scripts
 - sql_1_createtables: import 2 tables from CSV in tables folder
 - sql_2_querys: resolve A, createing 2 views and making query
+
+
+<img width="600" src="SQL/images/item_a.png"/>
+
+
 - sql_3_querys: resolve B, with a function and a query.
+
+<img width="500" src="SQL/images/item_b.png"/>
 
 I try to solve it in a scalable way, so functions and views can be reused in other queries.
 
