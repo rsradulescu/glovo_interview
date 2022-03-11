@@ -22,7 +22,7 @@ timestamp when the courier enters the delivery area.
 
 -- Resource 1) To propose a scalable solution I make a function that return average between 2 dates
 -- NOTE: I extract the last 30 days from creation_time
-CREATE FUNCTION  get_film_count(init_date timestamp, end_date timestamp, city char(3))
+CREATE FUNCTION  get_film_avg(init_date timestamp, end_date timestamp, city char(3))
 RETURNS int
 LANGUAGE plpgsql
 as
@@ -48,7 +48,7 @@ $$;
 -----------------------------------------------------------------------------
 -- Solution) use function for each city and date between now and (now -30 days)
 SELECT 
-	city_code, get_film_count(NOW()::timestamp, (NOW()::timestamp - INTERVAL '30 DAY'), city_code)
+	city_code, get_film_avg(NOW()::timestamp, (NOW()::timestamp - INTERVAL '30 DAY'), city_code)
 FROM 
 	orders o
 
